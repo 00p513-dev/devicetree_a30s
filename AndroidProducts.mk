@@ -14,7 +14,5 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/a30s
-
-include $(call all-makefiles-under,$(LOCAL_PATH))
-PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_a30s.mk
+PRODUCT_MAKEFILES := $(LOCAL_PATH)/lineage_a30s.mk
+COMMON_LUNCH_CHOICES := lineage_a30s-userdebug

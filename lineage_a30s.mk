@@ -22,7 +22,7 @@ $(call inherit-product, build/target/product/embedded.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 
 PRODUCT_DEVICE := a30s
-PRODUCT_NAME := omni_a30s
+PRODUCT_NAME := lineage_a30s
 PRODUCT_MODEL := Samsung Galaxy A30s
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
