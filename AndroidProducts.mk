@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := $(LOCAL_PATH)/lineage_a30s.mk
-COMMON_LUNCH_CHOICES := lineage_a30s-userdebug
+COMMON_LUNCH_CHOICES := lineage_a30s-userdebug lineage_a30s-eng lineage_a30s-user
