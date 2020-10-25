@@ -14,5 +14,10 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := $(LOCAL_PATH)/lineage_a30s.mk
-COMMON_LUNCH_CHOICES := lineage_a30s-userdebug lineage_a30s-eng lineage_a30s-user
+PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/mokee_a30s.mk
+
+COMMON_LUNCH_CHOICES := \
+    mokee_a30s-eng \
+    mokee_a30s-user \
+    mokee_a30s-userdebug
