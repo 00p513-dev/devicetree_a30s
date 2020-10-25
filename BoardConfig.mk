@@ -51,18 +51,15 @@ TW_INCLUDE_CRYPTO_FBE := true
 TW_INCLUDE_FBE := true
 
 # Kernel
-TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_CONFIG := exynos7885-a30s_defconfig
-TARGET_KERNEL_SOURCE := kernel/samsung/exynos7904
-
-# Extracted with libbootimg
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --header_version 1 --board SRPSA16C003KU
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_IMAGE_NAME := Image dtbo.img
 BOARD_INCLUDE_RECOVERY_DTBO := true
-BOARD_PREBUILT_DTBOIMAGE  := $(OUT_DIR)/target/product/a30s/obj/KERNEL_OBJ/arch/$(TARGET_ARCH)/boot/dtbo.img
+
+# Kernel prebuilt
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -73,7 +70,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/recovery.fstab
 
 # Recovery
-TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
+TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 
 # System as root
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
